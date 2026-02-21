@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_plot
+ Sample
+# Source files and their labels
+/home/yun/opencv_contrib-4.1.0/modules/plot/samples/plot_demo.cpp
+ Extra
+ opencv_plot
+ Sample

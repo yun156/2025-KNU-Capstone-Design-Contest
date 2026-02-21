@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_structured_light
+ Sample
+# Source files and their labels
+/home/yun/opencv_contrib-4.1.0/modules/structured_light/samples/cap_pattern.cpp
+ Extra
+ opencv_structured_light
+ Sample

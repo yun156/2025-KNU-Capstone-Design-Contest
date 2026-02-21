@@ -1,0 +1,24 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/yun/opencv_contrib-4.1.0/modules/face/samples/samplewriteconfigfile.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_face",
+				"Sample"
+			]
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Extra",
+			"opencv_face",
+			"Sample"
+		],
+		"name" : "example_face_samplewriteconfigfile"
+	}
+}

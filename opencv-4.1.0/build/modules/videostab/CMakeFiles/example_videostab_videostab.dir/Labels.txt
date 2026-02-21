@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_videostab
+ Sample
+# Source files and their labels
+/home/yun/opencv_contrib-4.1.0/modules/videostab/samples/videostab.cpp
+ Extra
+ opencv_videostab
+ Sample

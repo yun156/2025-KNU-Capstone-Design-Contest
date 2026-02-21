@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_reg
+ Sample
+# Source files and their labels
+/home/yun/opencv_contrib-4.1.0/modules/reg/samples/map_test.cpp
+ Extra
+ opencv_reg
+ Sample

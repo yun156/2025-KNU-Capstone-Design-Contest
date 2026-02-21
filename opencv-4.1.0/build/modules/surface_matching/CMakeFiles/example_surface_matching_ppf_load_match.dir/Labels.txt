@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_surface_matching
+ Sample
+# Source files and their labels
+/home/yun/opencv_contrib-4.1.0/modules/surface_matching/samples/ppf_load_match.cpp
+ Extra
+ opencv_surface_matching
+ Sample

@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_line_descriptor
+ Sample
+# Source files and their labels
+/home/yun/opencv_contrib-4.1.0/modules/line_descriptor/samples/radius_matching.cpp
+ Extra
+ opencv_line_descriptor
+ Sample

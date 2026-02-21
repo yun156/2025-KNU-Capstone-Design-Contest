@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_ximgproc
+ Sample
+# Source files and their labels
+/home/yun/opencv_contrib-4.1.0/modules/ximgproc/samples/fourier_descriptors_demo.cpp
+ Extra
+ opencv_ximgproc
+ Sample

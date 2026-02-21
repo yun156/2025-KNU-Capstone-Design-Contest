@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_datasets
+ Sample
+# Source files and their labels
+/home/yun/opencv_contrib-4.1.0/modules/datasets/samples/or_imagenet.cpp
+ Extra
+ opencv_datasets
+ Sample

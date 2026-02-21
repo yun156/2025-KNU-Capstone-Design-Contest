@@ -1,0 +1,24 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/yun/opencv_contrib-4.1.0/modules/datasets/samples/or_imagenet.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_datasets",
+				"Sample"
+			]
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Extra",
+			"opencv_datasets",
+			"Sample"
+		],
+		"name" : "example_datasets_or_imagenet"
+	}
+}

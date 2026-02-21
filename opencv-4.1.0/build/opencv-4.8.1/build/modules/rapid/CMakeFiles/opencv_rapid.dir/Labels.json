@@ -1,0 +1,57 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/yun/opencv-4.1.0/build/opencv_contrib-4.8.1/modules/rapid/include/opencv2/rapid.hpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rapid",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/yun/opencv-4.1.0/build/opencv_contrib-4.8.1/modules/rapid/src/histogram.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rapid",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/yun/opencv-4.1.0/build/opencv_contrib-4.8.1/modules/rapid/src/rapid.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rapid",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/yun/opencv-4.1.0/build/opencv_contrib-4.8.1/modules/rapid/src/precomp.hpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rapid",
+				"Module"
+			]
+		},
+		{
+			"file" : "/home/yun/opencv-4.1.0/build/opencv-4.8.1/build/cvconfig.h"
+		},
+		{
+			"file" : "/home/yun/opencv-4.1.0/build/opencv-4.8.1/build/opencv2/opencv_modules.hpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Extra",
+			"opencv_rapid",
+			"Module"
+		],
+		"name" : "opencv_rapid"
+	}
+}

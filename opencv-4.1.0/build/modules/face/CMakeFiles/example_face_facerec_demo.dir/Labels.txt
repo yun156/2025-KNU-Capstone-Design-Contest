@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_face
+ Sample
+# Source files and their labels
+/home/yun/opencv_contrib-4.1.0/modules/face/samples/facerec_demo.cpp
+ Extra
+ opencv_face
+ Sample

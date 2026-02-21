@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libopencv_gapi_pch_dephelp.a CMakeFiles/opencv_gapi_pch_dephelp.dir/opencv_gapi_pch_dephelp.cxx.o
+/usr/bin/ranlib ../../lib/libopencv_gapi_pch_dephelp.a

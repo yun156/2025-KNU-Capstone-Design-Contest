@@ -1,0 +1,21 @@
+# Target labels
+ Extra
+ opencv_aruco
+ AccuracyTest
+# Source files and their labels
+/home/yun/opencv-4.1.0/build/opencv_contrib-4.8.1/modules/aruco/test/test_aruco_tutorial.cpp
+ Extra
+ opencv_aruco
+ AccuracyTest
+/home/yun/opencv-4.1.0/build/opencv_contrib-4.8.1/modules/aruco/test/test_main.cpp
+ Extra
+ opencv_aruco
+ AccuracyTest
+/home/yun/opencv-4.1.0/build/opencv_contrib-4.8.1/modules/aruco/test/test_aruco_utils.hpp
+ Extra
+ opencv_aruco
+ AccuracyTest
+/home/yun/opencv-4.1.0/build/opencv_contrib-4.8.1/modules/aruco/test/test_precomp.hpp
+ Extra
+ opencv_aruco
+ AccuracyTest

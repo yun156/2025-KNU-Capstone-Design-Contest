@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_xphoto
+ Sample
+# Source files and their labels
+/home/yun/opencv_contrib-4.1.0/modules/xphoto/samples/oil.cpp
+ Extra
+ opencv_xphoto
+ Sample

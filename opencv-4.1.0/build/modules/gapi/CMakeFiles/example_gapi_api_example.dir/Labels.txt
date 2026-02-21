@@ -1,0 +1,9 @@
+# Target labels
+ Main
+ opencv_gapi
+ Sample
+# Source files and their labels
+/home/yun/opencv-4.1.0/modules/gapi/samples/api_example.cpp
+ Main
+ opencv_gapi
+ Sample

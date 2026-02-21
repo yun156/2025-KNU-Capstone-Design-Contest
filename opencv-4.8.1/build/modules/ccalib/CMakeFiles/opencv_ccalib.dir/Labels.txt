@@ -1,0 +1,43 @@
+# Target labels
+ Extra
+ opencv_ccalib
+ Module
+# Source files and their labels
+/home/yun/opencv_contrib-4.8.1/modules/ccalib/include/opencv2/ccalib.hpp
+ Extra
+ opencv_ccalib
+ Module
+/home/yun/opencv_contrib-4.8.1/modules/ccalib/include/opencv2/ccalib/multicalib.hpp
+ Extra
+ opencv_ccalib
+ Module
+/home/yun/opencv_contrib-4.8.1/modules/ccalib/include/opencv2/ccalib/omnidir.hpp
+ Extra
+ opencv_ccalib
+ Module
+/home/yun/opencv_contrib-4.8.1/modules/ccalib/include/opencv2/ccalib/randpattern.hpp
+ Extra
+ opencv_ccalib
+ Module
+/home/yun/opencv_contrib-4.8.1/modules/ccalib/src/ccalib.cpp
+ Extra
+ opencv_ccalib
+ Module
+/home/yun/opencv_contrib-4.8.1/modules/ccalib/src/multicalib.cpp
+ Extra
+ opencv_ccalib
+ Module
+/home/yun/opencv_contrib-4.8.1/modules/ccalib/src/omnidir.cpp
+ Extra
+ opencv_ccalib
+ Module
+/home/yun/opencv_contrib-4.8.1/modules/ccalib/src/randpattern.cpp
+ Extra
+ opencv_ccalib
+ Module
+/home/yun/opencv_contrib-4.8.1/modules/ccalib/src/precomp.hpp
+ Extra
+ opencv_ccalib
+ Module
+/home/yun/opencv-4.8.1/build/cvconfig.h
+/home/yun/opencv-4.8.1/build/opencv2/opencv_modules.hpp

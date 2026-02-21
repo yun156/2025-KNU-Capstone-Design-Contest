@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_xfeatures2d
+ Sample
+# Source files and their labels
+/home/yun/opencv_contrib-4.1.0/modules/xfeatures2d/samples/shape_transformation.cpp
+ Extra
+ opencv_xfeatures2d
+ Sample

@@ -1,0 +1,33 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/yun/opencv_contrib-4.8.1/modules/aruco/perf/perf_main.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_aruco",
+				"PerfTest"
+			]
+		},
+		{
+			"file" : "/home/yun/opencv_contrib-4.8.1/modules/aruco/perf/perf_precomp.hpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_aruco",
+				"PerfTest"
+			]
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Extra",
+			"opencv_aruco",
+			"PerfTest"
+		],
+		"name" : "opencv_perf_aruco"
+	}
+}
