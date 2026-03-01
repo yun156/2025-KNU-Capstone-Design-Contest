@@ -24,9 +24,7 @@ def import_data(data_dir, min_throttle=0.05):
         import pandas as pd
     except ImportError as e:
         raise ImportError(
-            "import_data()는 훈련 전용이며 pandas가 필요합니다. "
-            "라즈베리파이에서 추론만 할 경우 utlis.import_data()를 호출하지 마세요. "
-            "훈련을 원한다면 'pip install pandas'로 설치하세요."
+            # import_data()는 훈련 전용이며 pandas가 필요
         ) from e
 
     log_csv = os.path.join(data_dir, "log.csv")
@@ -49,7 +47,7 @@ def import_data(data_dir, min_throttle=0.05):
             bad_header = True
 
     if bad_header:
-        # 2) 헤더 없음 → 컬럼명 강제 지정
+        # 2) 헤더 없음 -> 컬럼명 강제 지정
         df = pd.read_csv(log_csv, engine="python", sep=None, header=None,
                          names=["timestamp", "image_path", "steer", "throttle"],
                          encoding="utf-8-sig", on_bad_lines="skip")
@@ -69,7 +67,7 @@ def import_data(data_dir, min_throttle=0.05):
 
         return df[["image", "steer"]].reset_index(drop=True)
 
-    # ---- 일반 케이스: 헤더 있음 ----
+    # 일반 케이스: 헤더 있음
     df.columns = [c.strip().lower() for c in df.columns]
 
     img_col_candidates   = ["image_path", "image", "img", "path", "filepath"]
