@@ -35,15 +35,15 @@ FILTER_N = 5
 DETECT_DT = 0.05
 
 SLOW_TOP = 20.0   # 감속 상한(cm)
-STOP_AT  = 8.0    # 여기서 정지
+STOP_AT  = 8.0    # 정지할 부분
 EMERGENCY_AT = 5.0  # 급정지 + LED ON
 STEER_TRIM     = 0.00   # 중심 트림(왼쪽으로 쳐지면 +0.02 정도, 오른쪽이면 -0.02)
 STEER_DEADZONE = 0.08   # 이내는 0으로 무시(미세 떨림 억제)
 STEER_CLIP     = 0.40   # 예측 조향의 절대 최대값 제한(0~1)
 STEER_EMA_A    = 0.6    # 지수이동평균 계수(높을수록 더 느리게 반응)
 TURN_SCALE     = 0.50   # MotorModule 내 turn*70이 커서, 진입 전 스케일 다운
-WARMUP_SEC     = 1.0    # 시동 후 N초 동안 조향 0(카메라/AE 안정 대기)
-SOFTSTART_SEC  = 1.5    # 속도도 서서히 올리기(급출발 방지)
+WARMUP_SEC     = 1.0    # 시동 후 N초 동안 조향 0(카메라 안정 대기)
+SOFTSTART_SEC  = 1.5    # 속도 서서히 올리기(급출발 방지)
 
 
 # ===================== 유틸 =====================
@@ -64,7 +64,7 @@ def predict(itp, inp_idx, out_idx, img):
 def open_cam():
     print("[BOOT] opening camera...")
     cam = Picamera2()
-    # 640x480보다 큰 해상도 우선 시도 → 실패 시 자동 폴백
+    # 640x480보다 큰 해상도 우선 시도 -> 실패 시 자동 롤백
     tried = [(1024, 768), (800, 600), (640, 480)]
     for W, H in tried:
         try:
@@ -189,7 +189,7 @@ def main():
                 # 프레임 없을 때도 파이프 유지
                 bgr = np.zeros((480, 640, 3), np.uint8)
             
-                        # ---- [조향 후처리] 트림 → 데드존 → 클립 → EMA → 스케일 ----
+            # ---- [조향 후처리] 트림 → 데드존 → 클립 → EMA → 스케일
             steer = TURN_SIGN * (steer + STEER_TRIM)            # 부호/트림
             if abs(steer) < STEER_DEADZONE:                     # 데드존
                 steer = 0.0
@@ -198,7 +198,7 @@ def main():
             # EMA 스무딩 (steer_s는 main()에서 초기화)
             steer_s = STEER_EMA_A * steer_s + (1.0 - STEER_EMA_A) * steer
 
-            # MotorModule로 넘길 조향(너무 예민하면 TURN_SCALE 더 줄이세요)
+            # MotorModule로 넘길 조향(너무 예민하면 TURN_SCALE 줄여주기)
             turn_f = TURN_SCALE * steer_s
 
 
@@ -211,9 +211,9 @@ def main():
             d_cm = dfilter.value()
 
             # ---- 속도/조향 결정 ----
-                        # ---- [속도/조향 결정] WARMUP + SOFTSTART + 초음파 감속/정지 ----
+            # ---- [속도/조향 결정] WARMUP + SOFTSTART + 초음파 감속/정지
 
-            # 1) 소프트스타트: 시작 후 SOFTSTART_SEC 동안 0→throttle로 선형 상승
+            # 1) 소프트스타트: 시작 후 SOFTSTART_SEC 동안 0->throttle로 선형 상승
             elapsed = time.time() - t_start
             base_spd = throttle
             if elapsed < SOFTSTART_SEC:
@@ -228,14 +228,14 @@ def main():
             emergency = False
             if d_cm is not None:
                 if d_cm <= EMERGENCY_AT:
-                    # 5cm 이내 → 급정지 + LED ON
+                    # 5cm 이내 -> 급정지 + LED ON
                     spd_eff = 0.0
                     emergency = True
                 elif d_cm <= STOP_AT:
-                    # 5~8cm → 정지(LED OFF)
+                    # 5~8cm -> 정지(LED OFF)
                     spd_eff = 0.0
                 elif d_cm <= SLOW_TOP:
-                    # 8~20cm → 선형 감속 (20→100%, 8→0%)
+                    # 8~20cm -> 선형 감속 (20→100%, 8→0%)
                     scale = (d_cm - STOP_AT) / max(1e-6, (SLOW_TOP - STOP_AT))  # (d-8)/(20-8)
                     scale = float(np.clip(scale, 0.0, 1.0))
                     spd_eff = spd_eff * scale
