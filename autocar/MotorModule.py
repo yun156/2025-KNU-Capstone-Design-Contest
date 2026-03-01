@@ -21,14 +21,12 @@ class Motor():
         self.mySpeed=0
         
     def move(self,speed=0.5,turn=0,t=0): 
-        """
-        speed: 0.0 ~ 1.0 (전진/후진 속도)
-        turn:  -1.0 ~ +1.0 (음수=왼쪽, 양수=오른쪽)
-        """
+        # speed: 0.0 ~ 1.0 (전진/후진 속도)
+        # turn:  -1.0 ~ +1.0 (음수=왼쪽, 양수=오른쪽)
         speed *= 100
-        turn  *= 70   # 회전 민감도 스케일링
+        turn  *= 70   # 회전 민감도
 
-        # 🔹 표준화: 양수 turn → 오른쪽 바퀴 느려짐 → 오른쪽 회전
+        # 표준화: 양수 turn -> 오른쪽 바퀴 느려짐 -> 오른쪽 회전
         leftSpeed  = speed - turn
         rightSpeed = speed + turn
 
